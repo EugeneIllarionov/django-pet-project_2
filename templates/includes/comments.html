@@ -1,0 +1,15 @@
+<div class="comments">
+    {% verbatim %}
+    <div class="comments__item" v-for="comment in post.comments">
+        <a href="#" class="comments__avatar-link">
+            <img :src=comment.author.avatar_thumbnail alt="user avatar">
+        </a>
+        <div class="comments__content">
+            <a href="#" class="comments__avatar-link">
+            <span class="comments__author-name">{{ comment.author.first_name }} {{ comment.author.last_name }}</span>
+            </a>
+            <p class="comments__text">{{ comment.text }}</p>
+        </div>
+    </div>
+    {% endverbatim %}
+</div>

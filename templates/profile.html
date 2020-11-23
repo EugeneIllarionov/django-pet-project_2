@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="profile">
+        <div class="profile__top-info">
+            <div class="profile__avatar">
+                <img src="{{ profile.avatar.url }}" alt="">
+                <img src="{{ profile.avatar_thumbnail.url }}" alt="">
+            </div>
+            <div class="profile__full-name">{{ profile.get_full_name }}</div>
+        </div>
+        <div class="profile__bot-info">
+            {% if profile.birth_date %}<span>birth date: {{ profile.birth_date }}</span>{% endif %}
+            {% if profile.location %}<span>location: {{ profile.location }}</span>{% endif %}
+            {% if profile.bio %}<span>info: {{ profile.bio }}</span>{% endif %}
+        </div>
+    </div>
+{% endblock %}
